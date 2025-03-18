@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:padding="16dp"
+    tools:context=".features.LinearLayoutScreen"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!-- App Logo and Name -->
+        <LinearLayout
+            android:id="@+id/header_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="50dp"
+            >
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/icon"
+                android:layout_gravity="center_vertical" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="GoWaste"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:layout_marginStart="8dp"
+                android:layout_gravity="center_vertical" />
+        </LinearLayout>
+
+        <!-- Title -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Daftar"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#000000" />
+
+        <!-- Subtitle -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Lengkapi data dirimu dibawah ini"
+            android:textSize="14sp"
+            android:textColor="#555555"
+            android:layout_marginBottom="35dp" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColorHint="@color/gray_200"
+            android:hint="Nama"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            app:hintTextColor="@color/gray_400"
+            app:expandedHintEnabled="false"
+            app:boxStrokeColor="@color/gray_400"
+            app:boxStrokeWidth="1dp"
+            app:boxStrokeWidthFocused="2dp"
+            android:layout_marginBottom="12dp">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTextName"
+                android:layout_width="match_parent"
+                android:hint="Nama Kamu"
+                android:textColorHint="@color/gray_200"
+                android:textColor="@color/black"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Nomor HP -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColorHint="@color/gray_200"
+            android:hint="Nomor HP"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            app:hintTextColor="@color/gray_400"
+            app:expandedHintEnabled="false"
+            app:boxStrokeColor="@color/gray_400"
+            app:boxStrokeWidth="1dp"
+            app:boxStrokeWidthFocused="2dp"
+            android:layout_marginBottom="12dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTextPhone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:hint="Nomor HP kamu"
+                android:textColorHint="@color/gray_200"
+                android:inputType="phone" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColorHint="@color/gray_200"
+            android:hint="Alamat"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            app:hintTextColor="@color/gray_400"
+            app:expandedHintEnabled="false"
+            app:boxStrokeColor="@color/gray_400"
+            app:boxStrokeWidth="1dp"
+            app:boxStrokeWidthFocused="2dp"
+            android:layout_marginBottom="12dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTextAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:hint="Alamat Kamu"
+                android:textColorHint="@color/gray_200"
+                android:inputType="textPostalAddress" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Birth Place and Date Fields in a Row -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="12dp">
+
+            <!-- Tempat Lahir -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="Tempat Lahir"
+                android:textColorHint="@color/gray_200"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_marginEnd="8dp"
+                app:hintTextColor="@color/gray_400"
+                app:expandedHintEnabled="false"
+                app:boxStrokeColor="@color/gray_400"
+                app:boxStrokeWidth="1dp"
+                app:boxStrokeWidthFocused="2dp"
+                android:layout_weight="1">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editTextBirthPlace"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:hint="Tempat Lahir"
+                    android:textColorHint="@color/gray_200"
+                    android:inputType="text" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Tanggal Lahir -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="Tanggal Lahir"
+                android:textColorHint="@color/gray_200"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_marginStart="8dp"
+                app:hintTextColor="@color/gray_400"
+                app:expandedHintEnabled="false"
+                app:boxStrokeColor="@color/gray_400"
+                app:boxStrokeWidth="1dp"
+                app:boxStrokeWidthFocused="2dp"
+                android:layout_weight="1">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editTextBirthDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:hint="DD/MM?YYYY"
+                    android:textColorHint="@color/gray_200"
+                    android:inputType="date" />
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
+
+        <!-- Password -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColorHint="@color/gray_200"
+            android:hint="Password"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            app:hintTextColor="@color/gray_400"
+            app:expandedHintEnabled="false"
+            app:boxStrokeColor="@color/gray_400"
+            app:boxStrokeWidth="1dp"
+            app:boxStrokeWidthFocused="2dp"
+            android:layout_marginBottom="16dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTextPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Password"
+                android:textColor="@color/black"
+                android:textColorHint="@color/gray_200"
+                android:inputType="textPassword"
+                 />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="24dp">
+
+            <CheckBox
+                android:id="@+id/checkBoxAgree"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Dengan ini kamu setuju datamu bocor"
+                android:textSize="14sp"
+                android:textColor="#333333"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="4dp"/>
+        </LinearLayout>
+
+        <!-- Register Button -->
+        <Button
+            android:id="@+id/signUpButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="70dp"
+            android:text="Daftar"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="@color/green_600"
+            android:textAllCaps="false" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

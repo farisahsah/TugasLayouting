@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".features.RelativeLayoutScreen">
+
+    <LinearLayout
+        android:id="@+id/header_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp">
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/icon"
+            android:layout_gravity="center_vertical" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="GoWaste"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_marginStart="8dp"
+            android:layout_gravity="center_vertical" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/avatar_image"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:src="@drawable/avatar"
+        android:layout_below="@id/header_layout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="80dp" />
+
+    <TextView
+        android:id="@+id/title_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/avatar_image"
+        android:layout_centerHorizontal="false"
+        android:layout_marginTop="48dp"
+        android:layout_marginLeft="20dp"
+        android:text="Selamat Datang di GoWaste!"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/black" />
+
+    <!-- Sub Judul -->
+    <TextView
+        android:id="@+id/subtitle_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title_text"
+        android:layout_centerHorizontal="false"
+        android:layout_marginTop="8dp"
+        android:layout_marginHorizontal="20dp"
+        android:text="Ga perlu lagi pusing ngurusin sampah, GoWaste bakal ambil sampahmu!"
+        android:textSize="16sp"
+        android:textColor="#555555"
+        />
+
+    <LinearLayout
+        android:id="@+id/button_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/subtitle_text"
+        android:layout_marginTop="120dp"
+        android:layout_marginHorizontal="20dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/login_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Masuk"
+            android:textSize="16sp"
+            android:backgroundTint="@color/green_600"
+            android:textColor="@color/white"
+            android:padding="12dp" />
+
+        <Button
+            android:id="@+id/register_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="16dp"
+            android:text="Daftar"
+            android:textSize="16sp"
+            android:backgroundTint="@color/green_200"
+            android:textAllCaps="false"
+            android:textColor="@color/green_600"
+            android:padding="12dp" />
+
+    </LinearLayout>
+
+
+
+
+
+
+    <!-- Tombol Daftar -->
+
+
+</RelativeLayout>
